@@ -1,3 +1,9 @@
+# Folder of test iages
+Example_Images/
+
+# Config file - may include sensitive data
+config.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
