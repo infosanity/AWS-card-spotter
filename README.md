@@ -7,6 +7,7 @@ mv config.py.template config.py
 ```
 
 **bucket** is *your* S3 bucket
+
 **images** is list of hardcoded (for now) filenames to scan within bucket
 
 ## Example Output
