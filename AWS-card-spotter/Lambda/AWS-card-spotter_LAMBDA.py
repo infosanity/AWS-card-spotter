@@ -1,11 +1,12 @@
 import json
 import boto3
+import os
 
 def notify_sns(message):
     """Send results to SNS for further processing."""
     client = boto3.client('sns', "eu-west-1")
     response = client.publish(
-        TargetArn="arn:aws:sns:eu-west-1:<<AWS ACCOUNT NUMBER>>:<<SNS TO PUBLISH TO>>",
+        TargetArn=os.environ['SNS_topic'],
         Message=json.dumps({'default': json.dumps(message)}),
         MessageStructure='json'
     )
