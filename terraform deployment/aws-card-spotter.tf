@@ -107,4 +107,3 @@ resource "aws_s3_bucket_notification" "bucket_notification" {
 resource "aws_sns_topic" "card-spotter-sns" {
   name = "AWS-CardSpotter-Distribution"
 }
-
