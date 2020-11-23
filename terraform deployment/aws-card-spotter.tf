@@ -108,3 +108,8 @@ resource "aws_sns_topic" "card-spotter-sns" {
   name = "AWS-CardSpotter-Distribution"
 }
 
+data "archive_file" "spotter_lambda_archive" {
+  type        = "zip"
+  source_dir = "../AWS-card-spotter/Lambda/"
+  output_path = "AWS-card-spotter_LAMBDA.zip"
+}
